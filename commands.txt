@@ -77,3 +77,24 @@ Using network 'development'.
 Compiling your contracts...
 ===========================
 > Everything is up to date, there is nothing to compile.
+
+
+// Add frontend
+$ truffle migrate --reset
+
+// Run lite-server
+$ npm run dev
+> pet-shop@1.0.0 dev /election-dapp
+> lite-server
+[Browsersync] Access URLs:
+ --------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.0.101:3000
+ --------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ --------------------------------------
+[Browsersync] Serving files from: ./src
+[Browsersync] Serving files from: ./build/contracts
+[Browsersync] Watching files...
+21.02.24 21:45:32 200 GET /index.html
