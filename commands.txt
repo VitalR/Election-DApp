@@ -68,3 +68,12 @@ truffle(development)> candidate[2]
 undefined
 truffle(development)> accounts[0]
 '0x5A4bFc48B1B2b99F310c85250f50A7A8c0df'
+
+
+// Add tests and run them
+$ truffle test
+Using network 'development'.
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
