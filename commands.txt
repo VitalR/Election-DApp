@@ -98,3 +98,37 @@ $ npm run dev
 [Browsersync] Serving files from: ./build/contracts
 [Browsersync] Watching files...
 21.02.24 21:45:32 200 GET /index.html
+
+// Connect new voter account in MetaMask with DApp
+
+// Add voteCast func in the Contract, redeploy the Contract
+$ truffle migrate --reset
+
+> web3.eth.getAccounts().then(function(i) { accounts = i })
+undefined
+truffle(development)> accounts[0]
+'0x3212e6470BFb440080bEdC0F1e319B440b5aB'
+truffle(development)> 
+undefined
+truffle(development)> app.voteCast(1, { from: accounts[0] })
+{ tx:
+   '0x6255d941e2324fbaf61430c3a773f8a2897dd2ece587801377cf5900bb51a',
+  receipt:
+   { transactionHash:
+      '0x6255d941e2324fbaf61430c3a773f8a2897dd2ece587801377cf5900bb51a',
+     transactionIndex: 0,
+     blockHash:
+      '0xc4aeb910ee780d6a651877e6f25bb9fa2acab355294f4d858c7d5393d327f',
+     blockNumber: 29,
+     from: '0x3212e6470bfb440080bedc0f1e319b440b5ab',
+     to: '0x5d1debf2b32dd720dce453218a7f695754536',
+     gasUsed: 63353,
+     cumulativeGasUsed: 63353,
+     contractAddress: null,
+     logs: [],
+     status: true,
+     logsBloom:
+      '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+     rawLogs: [] },
+  logs: [] }
+truffle(development)> 

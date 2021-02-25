@@ -61,7 +61,9 @@ App = {
     var content = $("#content");
 
     loader.show();
+    loader.hide();
     content.hide();
+    content.show();
 
     // Load account data connected to blockchain
     web3.eth.getCoinbase(function(err, account) {
@@ -114,7 +116,7 @@ App = {
   castVote: function() {
     var candidateId = $('#candidatesSelect').val();
     App.contracts.Election.deployed().then(function(instance) {
-      return instance.vote(candidateId, { from: App.account });
+      return instance.voteCast(candidateId, { from: App.account });
     }).then(function(result) {
       // Wait for votes to update
       $("#content").hide();
